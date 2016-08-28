@@ -25,20 +25,40 @@
 							<span>Certified in USSR</span>
 						</p>
 					</div>
+
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 				</div>
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				
-			</div>
+
+				<div id="collapsable-nav" class="collapse navbar-collapse">
+					<ul id="nav-list" class="nav navbar-nav navbar-right">
+						<li>
+							<a href="">
+								<span class="glyphicon glyphicon-fire"></span><br class="hidden-xs"> Parameters</a></li>
+						<li>
+							<a href="#">
+								<span class="glyphicon glyphicon-plane"></span><br class="hidden-xs"> Shipping</a></li>
+						<li>
+							<a href="#">
+								<span class="glyphicon glyphicon-shopping-cart"></span><br class="hidden-xs"> Order</a></li>
+						<li id="phone" class="hidden-xs">
+							<a href="tel:888-888-8888">
+								<span>888-888-8888</span>
+								<div>* We Deliver</div>
+							</a>
+						</li>
+					</ul><!-- #nav-list -->
+				</div><!-- .collapse .navbar-collapse -->
+			</div>			
 		</nav>
 	</header>
 	<!-- jQuery (Bootstrap JS plugins depend on it) -->
-	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
