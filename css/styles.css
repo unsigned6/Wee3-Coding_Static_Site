@@ -1,6 +1,19 @@
 body {
 	font-size: 16px;
 	color: #fff;
-	background-color: #48036f;
+	background-color: #150873;
 	font-family: 'Indie Flower', cursive;
+}
+
+#header-nav {
+	background-color: #d32027;
+	border-radius: 0;
+	border: 0;
+}
+
+#logo-img {
+	background: url('../images/logo-kalashnikov.png') no-repeat;
+	width: 150px;
+	height: 150px;
+	margin: 10px 15px 10px 0;
 }
