@@ -74,16 +74,102 @@ body {
 	padding-right: 15px;
 }
 
-.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+.navbar-header button.navbar-toggle, navbar-header button, .navbar-header .icon-bar  {
 	border: 1px solid #150873;
+	background-color: #d32027;
+}
+
+button.navbar-toggle:focus {
+	background-color: #d32027;
 }
 
 .navbar-header button.navbar-toggle {
 	clear: both;
 	margin-top: -30px;
 }
+/* END HEADER */
 
-@media (min-width: 1200px) {}
+/* FOOTER */
+.panel-footer {
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-color: #d32027;
+	border-top: 0;
+}
+
+.panel-footer div.row {
+	margin-bottom: 35px;
+}
+
+#hours, #address {
+	line-height: 2;
+}
+
+#hours > span, #address > span {
+	font-size: 1.3em;
+}
+
+#address p {
+	color: #ffa200;
+	font-size: .8em;
+	line-height: 1.8;
+}
+
+#testemonials {
+	font-style: italic;
+}
+#testemonials p:nth-child(2) {
+	margin-top: 25px;
+}
+/* HOME PAGE */
+.container .jumbotron {
+	box-shadow: 0 0 50px #d32027;
+	border: 2px solid #d32027;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+	height: 250px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+	border: 2px solid #d32027;
+	overflow: hidden;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+	background: url('../images/menu-tile.jpg') no-repeat;
+	background-position: center; 
+}
+
+#specials-tile {
+	background: url('../images/specials-tile.jpg') no-repeat;
+	background-position: center; 
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: .8;
+}
+/* END HOME PAGE */
+@media (min-width: 1200px) {
+	.container .jumbotron {
+		background: url('../images/ak_1200.jpg') no-repeat;
+		height: 675px;
+	}
+}
 @media (min-width: 992px) and (max-width: 1199px) {
 	#logo-img {
 		background: url('../images/logo-kalashnikov-small.png') no-repeat;
@@ -91,8 +177,18 @@ body {
 		height: 100px;
 		margin: 5px 5px 6px 0;
 	}
+
+	.container .jumbotron {
+		background: url('../images/ak_992.jpg') no-repeat;
+		height: 558px;
+	}
 }
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+	.container .jumbotron {
+		background: url('../images/ak_768.jpg') no-repeat;
+		height: 432px;
+	}
+}
 @media (max-width: 767px) {
 	.navbar-brand {
 		padding-top: 10px;
@@ -115,5 +211,56 @@ body {
 	#collapsable-nav a span {
 		font-size: 1em;
 		margin-right: 5px;
+	}
+	#call-btn > a {
+		font-size: 1.5em;
+		display: block;
+		margin: 0 20px;
+		padding: 10px;
+		border: 2px solid #fff;
+		background-color: #d32027;
+		color: white;
+	}
+	#xs-deliver {
+		margin-top: 5px;
+		font-size: .7em;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+	}
+
+	.container .jumbotron {
+		margin-top: 30px;
+		padding: 0;
+	}
+
+	#menu-tile, #specials-tile {
+		width: 360px;
+		margin: 0 auto 15px;
+	}
+	/* End Header */
+
+	/* Footer */
+	.panel-footer section {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.panel-footer section:nth-child(3) {
+		margin-bottom: 0;
+	}
+	.panel-footer section hr {
+		width: 50%;
+	}
+}
+
+@media (max-width: 479px) {
+	/* Header */
+	.navbar-brand h1 {
+		padding-top: 5px;
+		font-size: 6vw;
+	}
+	/* Home page */
+	#menu-tile, #specials-tile {
+		width: 90%;
+		margin: 0 auto 15px;
 	}
 }
