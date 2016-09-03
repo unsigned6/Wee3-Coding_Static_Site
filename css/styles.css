@@ -164,12 +164,97 @@ button.navbar-toggle:focus {
 	opacity: .8;
 }
 /* END HOME PAGE */
+
+/* MENU CATEGORIES PAGE */
+.category-tile {
+	position: relative;
+	border: 2px solid #d32027;
+	overflow: hidden;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 15px;
+}
+.category-tile span {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: .8;
+}
+
+.category-tile:hover {
+	box-shadow: 0 1px 5px 1px #d32027;
+}
+
+.menu-categories-title + div {
+	margin-bottom: 50px;
+}
+li:active {
+	color: #d32027;
+	background-color: #150873;
+}
+/* MENU CATEGORIES PAGE */
+
+/* SINGLE CATEGORY PAGE */
+.menu-item-tile {
+	margin-bottom: 25px;
+}
+.menu-item-tile hr {
+	width: 80%;
+}
+
+.menu-item-tile .menu-item-price {
+	font-size: 1.1em;
+	text-align: right;
+	margin-top: -15px;
+	margin-right: -15px;
+}
+.menu-item-tile .menu-item-price span {
+	font-size: .6em;
+}
+.menu-item-photo {
+	position: relative;
+	border: 2px solid #d32027;
+	overflow: hidden;
+	padding: 0;
+	margin-right: -15px;
+	margin-left: auto;
+	margin-bottom: 20px;
+	max-width: 250px;
+}
+.menu-item-photo div {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 80px;
+	background-color: #d32027;
+	text-align: center;
+}
+
+.menu-item-description {
+	padding-right: 30px;
+}
+h3.menu-item-title {
+	margin: 0 0 10px;
+}
+.menu-item-details {
+	font-size: .9em;
+	font-style: italic;
+}
+/******** Large devices only ********/
 @media (min-width: 1200px) {
 	.container .jumbotron {
 		background: url('../images/ak_1200.jpg') no-repeat;
 		height: 675px;
 	}
 }
+
+/******** Middle devices only ********/
 @media (min-width: 992px) and (max-width: 1199px) {
 	#logo-img {
 		background: url('../images/logo-kalashnikov-small.png') no-repeat;
@@ -183,12 +268,16 @@ button.navbar-toggle:focus {
 		height: 558px;
 	}
 }
+
+/******** Small devices only ********/
 @media (min-width: 768px) and (max-width: 991px) {
 	.container .jumbotron {
 		background: url('../images/ak_768.jpg') no-repeat;
 		height: 432px;
 	}
 }
+
+/******** Extrasmall devices only ********/
 @media (max-width: 767px) {
 	.navbar-brand {
 		padding-top: 10px;
@@ -250,8 +339,21 @@ button.navbar-toggle:focus {
 	.panel-footer section hr {
 		width: 50%;
 	}
+	/* End Footer */
+
+	.menu-item-photo {
+		margin-right: auto;
+	}
+	.menu-item-tile .menu-item-price {
+		text-align: center;
+	}
+	.menu-item-description {
+		text-align: center;
+	}
 }
 
+
+/******** Super-extrasmall devices only ********/
 @media (max-width: 479px) {
 	/* Header */
 	.navbar-brand h1 {
@@ -262,5 +364,14 @@ button.navbar-toggle:focus {
 	#menu-tile, #specials-tile {
 		width: 90%;
 		margin: 0 auto 15px;
+	}
+
+	.col-xxs-12 {
+		position: relative;
+  		min-height: 1px;
+  		padding-right: 15px;
+  		padding-left: 15px;
+  		float: left;
+  		width: 100%;
 	}
 }
