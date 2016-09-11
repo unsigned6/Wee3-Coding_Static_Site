@@ -38,6 +38,25 @@ $(function () {
     return string;
   };
 
+  var switchMenuToActive = function () {
+    // remove 'active' from button
+    var classes = document.querySelector("#navHomeButton").className;
+    
+    classes = classes.replace(new RegExp("active", "g"), "");
+    
+    document.querySelector("#navHomeButton").className = classes;
+
+    console.log(document.querySelector("#navMenuButton").className);
+
+    classes = document.querySelector("#navMenuButton").className;
+
+    if (classes.indexOf("active") == -1) {
+      classes += " active";
+      console.log(classes);
+      document.querySelector("#navMenuButton").className = classes;
+    }
+  };
+
   // On page load (befor images or CSS)
   document.addEventListener("DOMContentLoaded", function (event) {
     showLoading("#main-content");
@@ -76,6 +95,8 @@ $(function () {
         $ajaxUtils.sendGetRequest(
             categoryHtml,
             function (categoryHtml) {
+              switchMenuToActive();
+
               var categoryViewHtml = 
                 buildCategoriesViewHTML(categories,
                                             categoriesTitleHtml,
@@ -117,6 +138,8 @@ $(function () {
         $ajaxUtils.sendGetRequest(
           menuItemHtml,
           function (menuItemHtml) {
+            switchMenuToActive();
+
             var menuItemsViewHtml = 
               buildMenuItemsViewHTML(categoryMenuItems,
                                      menuItemsTitleHtml,
